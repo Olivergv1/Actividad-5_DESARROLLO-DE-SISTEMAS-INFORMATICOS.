@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +11,10 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #977f7f;
+            background-color: #050505;
         }
         .profile-header {
-            background-color: #4e0101; /* Fondo vino */
+            background-color: #270000; 
             height: 300px;
             position: relative;
             display: flex;
@@ -21,18 +22,28 @@
             align-items: center;
         }
 
+        .profile-info h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffffff; 
+            text-shadow: 2px 2px 5px #000; 
+        }
+
+
+
+
         .info-panel {
             position: absolute; 
             top: 300px; 
             right: 20px; 
-            text-align: center; 
+            text-align: center; /* Centra el contenido  */
             width: 250px; 
         }
 
         .profile-header img {
-            width: 80%; /*Banner más pequeño*/
+            width: 80%; /* tamaño de banner */
             height: auto;
-            border-radius: 15px; /*Bordes*/
+            border-radius: 15px; 
         }
         .profile-img {
             width: 150px;
@@ -44,13 +55,14 @@
             margin-left: 20px;
         }
         .profile-info {
-            background-color: rgb(170, 169, 169);
+            background-color: rgb(27, 3, 3);
             padding: 50px 20px 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgb(255, 255, 255);
             margin-top: 75px; 
-            margin-left: auto; 
+            margin-left: auto; /* Centrado automático */
             margin-right: auto; 
+            width: 80%; /
         }
         .profile-info h1 {
             font-size: 28px;
@@ -58,7 +70,7 @@
         }
         .profile-info p {
             font-size: 16px;
-            color: #555;
+            color: #ffffff;
         }
         .btn-join {
             background-color: #5865F2;
@@ -69,29 +81,31 @@
             background-color: #4752c4;
         }
         .btn-share {
-            background-color: #d3d3d3;
-            color: black;
+            background-color: #606eec;
+            color: rgb(255, 255, 255);
         }
         .btn-share:hover {
-            background-color: #bbbbbb;
+            background-color: #6c8aeb;
         }
         .categories {
-            position: absolute; /* Permite posicionar el recuadro de categorías*/
-            right: 20px; 
-            top: 550px; 
-            background-color: #f4f4f4; /* Fondo del recuadro */
+            position: absolute; /* recuadro de categorías de forma independiente */
+            right: 340px; 
+            top: 970px; 
+            background-color: #1a0404; 
             border-radius: 8px; 
             padding: 20px;
-            width: 250px; 
+            width: 280px; 
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
         }
         .categories h5 {
             font-size: 20px;
             font-weight: bold;
-            margin-bottom: 10px; 
-
+            color: #ffffff; 
+            text-transform: uppercase; 
+            margin-bottom: 10px;
+        }
         .categories span {
-            background-color: #5865F2; 
+            background-color: #6b3232; 
             color: white;
             border-radius: 12px;
             padding: 5px 10px;
@@ -106,7 +120,7 @@
         }
         
         .categories .col-6 {
-            flex: 1 1 45%; /* 2 columnas en categorias */
+            flex: 1 1 45%; /* categorías distribuidas en 2 columnas */
         }
 
         .guildAboutSectionMobile-2jJ8CZ {
@@ -141,8 +155,165 @@
         .colorStandard-1nZ0G7 {
             font-size: 16px;
             font-weight: bold;
-            color: #333;
+            color: #757474;
         }
+
+        /* Nuevo estilo para la sección de acerca de */
+        .about-section {
+            background-color: #dfe1e3;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+        }
+
+        .about-section h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .about-section p {
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+
+        .about-container {
+            color: #FFFFFF; 
+            display: flex;
+            justify-content: space-between;
+            gap: 20px; 
+            margin-top: 20px;
+        }
+
+        .about-box, .reasons-box {
+            width: 48%;  
+            padding: 20px;
+            background-color: #160202;  
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(56, 56, 56, 0.308);  
+        }
+
+        h3 {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+
+        .banner {
+            width: 100%;
+            padding: 20px;
+            background-color: #202225; /* Fondo del banner */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .links {
+            display: flex;
+            gap: 15px; /* Espacio entre los botones */
+        }
+
+        .button {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #1d0404; 
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .button:hover {
+            background-color: #4752C4; /* Color mas oscuro al pasar el mouse */
+            transform: scale(1.05); /* Efecto de agrandamiento */
+        }
+
+        .button:active {
+            transform: scale(0.95); /* Efecto de clic */
+        }
+
+/* Contenedor para los botones superiores */
+        .top-links {
+            width: 100%;
+            padding: 10px 0;
+            background-color: #000000; 
+            display: flex;
+            justify-content: center;
+            gap: 40px; 
+            position: fixed; /* Fija la barra en la parte superior */
+            top: 0; 
+            z-index: 1000; /* Asegura que esté por encima de todo */
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); 
+        }
+
+
+/* Estilo general de los botones */
+        .top-links .button {
+            padding: 8px 15px;
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+/* Colores específicos para cada botón */
+        .button-youtube {
+            background-color: #a80606; 
+        }
+
+        .button-twitch {
+            background-color: #480594; 
+        }
+
+        .button-facebook {
+            background-color: #01189b; 
+        }
+
+        .button-github {
+            background-color: #2b2a2a; 
+        }
+
+        /* Efecto hover para cada botón */
+        .button-youtube:hover {
+            background-color: #e0060646;
+        }
+
+        .button-twitch:hover {
+            background-color: #7804c057;
+        }
+
+        .button-facebook:hover {
+            background-color: #1f55e94f;
+        }
+
+        .button-github:hover {
+            background-color: #4d4b4b;
+        }
+
+
+
+/* Ajustar el contenido principal para evitar que quede debajo de los botones */
+        .banner {
+            margin-top: 60px; 
+        }
+
+
     </style>
 </head>
 <body>
@@ -158,8 +329,8 @@
                 <p>Estamos muy emocionados de presentar esta comunidad en la cual todos estamos unidos para disfrutar de todo tipo de juego.</p>
                 <p><strong>173 Online</strong> &bull; <strong>3,574 Members</strong></p>
                 <div class="btn-container">
-                    <a href="https://discord.gg/kM94WAa" class="btn btn-join px-4" target="_blank">Join Server</a>
-                    <a href="https://discord.gg/kM94WAa" class="btn btn-share px-4" target="_blank">Bot Oficial</a>
+                    <a href="https://discord.gg/kM94WAa" class="btn btn-join px-4" target="_blank">Servidor de discord</a>
+                    <a href="https://mee6.xyz/es/login?redirect=/es/dashboard" class="btn btn-share px-4" target="_blank">Bot Oficial</a>
                 </div>
             </div>
         </div>
@@ -168,66 +339,51 @@
     <div class="categories">
         <h5><strong>Categorías</strong></h5>
         <div class="row">
-            <div class="col-6"><span>Sports</span></div>
+            <div class="col-6"><span>Soporte</span></div>
             <div class="col-6"><span>Esports</span></div>
-            <div class="col-6"><span>Gaming</span></div>
+            <div class="col-6"><span>Juegos</span></div>
             <div class="col-6"><span>Entretenimiento</span></div>
+            <div class="col-6"><span>Llamadas</span></div>
+            <div class="col-6"><span>Strimer</span></div>
+
         </div>
     </div>
 
 
-    <div class="guildAboutSectionMobile-2jJ8CZ">
-        <div class="guildJoinReason-1FY-_0">
-            <div class="iconContainer-37Q3pA">
-                <img class="guildJoinReasonEmojiIcon-16ASX2" src="/assets/df8b5c1e4abb97e748071aeb28f1ba38.svg" alt="">
-            </div>
-            <div class="guildJoinReasonTextContainer-26hRN3">
-                <div class="colorMuted-2n-hoe">Cuanto hablamos?</div>
-                <div class="colorStandard-1nZ0G7">hablamos muy seguido</div>
-            </div>
-        </div>
-        <div class="guildJoinReason-1FY-_0">
-            <div class="iconContainer-37Q3pA">
-                <img class="guildJoinReasonEmojiIcon-16ASX2" src="/assets/7be2358758e81e1ab253eb071a9527c7.svg" alt="">
-            </div>
-            <div class="guildJoinReasonTextContainer-26hRN3">
-                <div class="colorMuted-2n-hoe">Server creado</div>
-                <div class="colorStandard-1nZ0G7">Marzo 17, 2017</div>
-            </div>
-        </div>
-        <div class="guildJoinReason-1FY-_0">
-            <div class="iconContainer-37Q3pA">
-                <img class="guildJoinReasonEmojiIcon-16ASX2" src="/assets/98fe9cdec2bf8ded782a7bf1e302b664.svg" alt="">
-            </div>
-            <div class="guildJoinReasonTextContainer-26hRN3">
-                <div class="colorStandard-1nZ0G7">Realizamos sorteos todas las semanas</div>
-            </div>
-        </div>
-        <div class="guildJoinReason-1FY-_0">
-            <div class="iconContainer-37Q3pA">
-                <img class="guildJoinReasonEmojiIcon-16ASX2" src="/assets/67069a13e006345ce28ecc581f2ed162.svg" alt="">
-            </div>
-            <div class="guildJoinReasonTextContainer-26hRN3">
-                <div class="colorStandard-1nZ0G7">Jugamos todos los días</div>
-            </div>
-        </div>
-        <div class="guildJoinReason-1FY-_0">
-            <div class="iconContainer-37Q3pA">
-                <img class="guildJoinReasonEmojiIcon-16ASX2" src="/assets/93bef14e30e0a38bbc07f733e524f652.svg" alt="">
-            </div>
-            <div class="guildJoinReasonTextContainer-26hRN3">
-                <div class="colorStandard-1nZ0G7">Nos apoyamos el uno al otro</div>
-            </div>
-        </div>
-        <div class="guildJoinReason-1FY-_0">
-            <div class="iconContainer-37Q3pA">
-                <img class="guildJoinReasonEmojiIcon-16ASX2" src="/assets/8544ea5ce32fd9e17df806eb1cfeab47.svg" alt="">
-            </div>
-            <div class="guildJoinReasonTextContainer-26hRN3">
-                <div class="colorStandard-1nZ0G7">Somos un equipo</div>
-            </div>
-        </div>
+    <div class="top-links">
+        <a class="button button-youtube" href="https://www.youtube.com/@Milmar">   YouTube</a>
+        <a class="button button-twitch" href="https://www.twitch.tv/soy_milmar">Twitch</a>
+        <a class="button button-facebook" href="https://www.facebook.com/OliverAlts">Facebook</a>
+        <a class="button button-github" href="https://github.com/Olivergv1">Github</a>
+
+
     </div>
 
+
+    <div class="about-container">
+        <div class="about-box">
+            <h3>¿Eres un apasionado de los videojuegos? ¿Te emociona sumergirte en aventuras virtuales, competir en emocionantes partidas y conectar con otros jugadores?</h3>
+            <p><strong>Entonces has encontrado tu hogar en “Milmar Community World”</strong>.</p>
+            <p>En nuestra comunidad, encontrarás:</p>
+            <ul>
+                <li><strong>Diversidad de jugadores</strong>: Desde los que juegan en solitario hasta los que prefieren los equipos, aquí todos tienen cabida. ¡La camaradería es nuestra regla número uno!</li>
+                <li><strong>Eventos y torneos</strong>: Organizamos torneos épicos, noches de streaming, retos semanales y más. ¿Estás listo para demostrar tus habilidades?</li>
+                <li><strong>Zona de consejos y trucos</strong>: Compartimos estrategias, recomendaciones de juegos y secretos bien guardados. ¡Juntos mejoramos!</li>
+                <li><strong>Ambiente amigable</strong>: No importa si eres un novato o un veterano, todos nos apoyamos mutuamente. ¡Las risas están garantizadas!</li>
+                <li><strong>Noticias y novedades</strong>: Mantente al día con las últimas actualizaciones de tus juegos favoritos.</li>
+            </ul>
+        </div>
+    
+        <div class="reasons-box">
+            <h3>Razones para unirse</h3>
+            <ul>
+                <li><strong>Comunidad activa y amigable</strong>: Siempre hay algo emocionante sucediendo, ¡y siempre hay alguien para jugar!</li>
+                <li><strong>Acceso exclusivo a eventos</strong>: Participa en torneos y otras actividades solo disponibles para los miembros.</li>
+                <li><strong>Aprende y mejora</strong>: Obtén consejos de expertos y mejora tus habilidades con nuestra ayuda.</li>
+                <li><strong>Conéctate con amigos</strong>: Forma parte de un grupo unido de jugadores con intereses similares.</li>
+            </ul>
+        </div>
+    </div>
+    
 </body>
 </html>
