@@ -88,14 +88,13 @@
             background-color: #6c8aeb;
         }
         .categories {
-            position: absolute; /* recuadro de categorías de forma independiente */
-            right: 340px; 
-            top: 970px; 
-            background-color: #1a0404; 
-            border-radius: 8px; 
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center; /* Centra las categorías horizontalmente */
+            background-color: #1a0404;
+            border-radius: 8px;
             padding: 20px;
-            width: 280px; 
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+            gap: 20px 1px; 
         }
         .categories h5 {
             font-size: 20px;
@@ -105,14 +104,14 @@
             margin-bottom: 10px;
         }
         .categories span {
-            background-color: #6b3232; 
+            flex: 1 1 calc(45% - 10px); 
+            text-align: center;
+            background-color: #6b3232;
             color: white;
             border-radius: 12px;
-            padding: 5px 10px;
-            display: inline-block;
+            padding: 10px;
             font-size: 14px;
         }
-
         .categories .row {
             display: flex;
             flex-wrap: wrap;
@@ -247,29 +246,47 @@
         }
 
 /* Contenedor para los botones superiores */
+        /* Botones superiores */
         .top-links {
-            width: 100%;
-            padding: 10px 0;
-            background-color: #000000; 
             display: flex;
-            justify-content: center;
-            gap: 40px; 
-            position: fixed; /* Fija la barra en la parte superior */
-            top: 0; 
-            z-index: 1000; /* Asegura que esté por encima de todo */
+            gap: 20px; /* Espacio entre los botones */
+            padding: 10px 15px;
+            background-color: #000000;
+            position: fixed; 
+            top: 0;
+            width: 100%;
+            justify-content: center; /* Centra los botones en la pantalla */
+            z-index: 1000;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); 
         }
+/* Ocultar barras de desplazamiento en algunos navegadores */
+        .top-links::-webkit-scrollbar {
+            display: none; /* Oculta la barra de desplazamiento en Chrome/Edge */
+        }
+
+/* Configuración específica para dispositivos móviles */
+        @media (max-width: 768px) {
+        .top-links {
+            justify-content: flex-start; /* los botones estarán alineados a la izquierda */
+            overflow-x: auto; 
+        }
+    }
 
 
-/* Estilo general de los botones */
+
+
+
+
+/* Ajustes para botones */
         .top-links .button {
+            display: inline-block;
+            text-align: center;
             padding: 8px 15px;
-            text-decoration: none;
-            color: white;
             border-radius: 5px;
             font-size: 14px;
             font-weight: bold;
             transition: background-color 0.3s ease, transform 0.2s ease;
+            flex-shrink: 0; /* Evita que los botones se reduzcan demasiado */
         }
 
 /* Colores específicos para cada botón */
@@ -280,7 +297,7 @@
         .button-twitch {
             background-color: #480594; 
         }
-
+            
         .button-facebook {
             background-color: #01189b; 
         }
@@ -308,6 +325,7 @@
 
 
 
+
 /* Ajustar el contenido principal para evitar que quede debajo de los botones */
         .banner {
             margin-top: 60px; 
@@ -315,15 +333,17 @@
 
 
     </style>
+
 </head>
+
 <body>
     <div class="profile-header">
-        <img src="portada.jpg" alt="Server Avatar"> <!-- Imagen de portada -->
+        <img src="portada.jpg" alt="Server Avatar">
     </div>
 
     <div class="container profile-info">
         <div class="d-flex flex-column flex-sm-row">
-            <img src="perfil.jpg" alt="Profile Avatar" class="profile-img"> <!-- Imagen de perfil -->
+            <img src="perfil.jpg" alt="Profile Avatar" class="profile-img"> 
             <div class="text-container">
                 <h1>Milmar Community World 🎄🎅</h1>
                 <p>Estamos muy emocionados de presentar esta comunidad en la cual todos estamos unidos para disfrutar de todo tipo de juego.</p>
@@ -345,18 +365,15 @@
             <div class="col-6"><span>Entretenimiento</span></div>
             <div class="col-6"><span>Llamadas</span></div>
             <div class="col-6"><span>Strimer</span></div>
-
         </div>
     </div>
 
 
     <div class="top-links">
-        <a class="button button-youtube" href="https://www.youtube.com/@Milmar">   YouTube</a>
+        <a class="button button-youtube" href="https://www.youtube.com/@Milmar">YouTube</a>
         <a class="button button-twitch" href="https://www.twitch.tv/soy_milmar">Twitch</a>
         <a class="button button-facebook" href="https://www.facebook.com/OliverAlts">Facebook</a>
         <a class="button button-github" href="https://github.com/Olivergv1">Github</a>
-
-
     </div>
 
 
@@ -374,6 +391,11 @@
             </ul>
         </div>
     
+
+        
+
+
+
         <div class="reasons-box">
             <h3>Razones para unirse</h3>
             <ul>
